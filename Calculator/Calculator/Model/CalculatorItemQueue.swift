@@ -7,20 +7,20 @@
 
 import Foundation
 
-class CalculatorItemQueue<T: Equatable, CalculateItem> {
-    var linkedList = LinkedList<T>()
+struct CalculatorItemQueue<T: Equatable, CalculateItem> {
+    var queue = LinkedList<T>()
     
     func enqueue(_ value: T) {
-        linkedList.insert(value)
+        queue.insert(value)
     }
     
     func dequeue() {
-        if let firstElement = linkedList.head?.value {
-            linkedList.delete(firstElement)
+        if let firstElement = queue.head?.value {
+            queue.delete(firstElement)
         }
     }
     
     func elements() -> [T] {
-        linkedList.elements()
+        queue.elements()
     }
 }

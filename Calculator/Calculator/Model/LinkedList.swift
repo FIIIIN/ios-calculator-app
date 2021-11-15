@@ -7,16 +7,6 @@
 
 import Foundation
 
-class Node<T> {
-    let value: T?
-    var next: Node?
-    
-    init(value: T?, next: Node? = nil) {
-        self.value = value
-        self.next = next
-    }
-}
-
 class LinkedList<T: Equatable> {
     private(set) var head: Node<T>?
     
